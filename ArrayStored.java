@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ArrayStored {
     public int Storage(int n1, int n2, int n3, int n4, int n5){
         int current;
-        int greatest = 0;
+        int greatest = Integer.MIN_VALUE;
         int store[] = {n1, n2, n3, n4, n5};
 
         for(int i = 0; i < store.length; i++){
