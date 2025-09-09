@@ -37,6 +37,8 @@ public class ArrayStored {
 
         int result = obj.Storage(n1, n2, n3, n4, n5);
         System.out.println("The greatest value is " + result);
+
+        scanner.close();
         
     }
 }
