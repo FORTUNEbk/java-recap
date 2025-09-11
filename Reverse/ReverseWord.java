@@ -1,3 +1,4 @@
+package Reverse;
 import java.util.Scanner;
 
 public class ReverseWord {
