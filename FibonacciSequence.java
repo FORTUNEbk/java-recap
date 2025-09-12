@@ -7,13 +7,13 @@ public class FibonacciSequence{
        
 
         System.out.println("Enter a number");
-        int num = scanner.nextInt();
-        int first = 0;
-        int second = 1;
+        long num = scanner.nextInt();
+        long first = 0;
+        long second = 1;
 
         for(int i = 1; i <= num; i++){
             System.out.print(first + " ");
-            int next = first + second;
+            long next = first + second;
              first = second;
              second = next;
         }

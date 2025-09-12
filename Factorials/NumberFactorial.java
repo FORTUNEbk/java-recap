@@ -1,3 +1,4 @@
+package Factorials;
 public class NumberFactorial {
     public int Number(int num){
         int fact = 1;
