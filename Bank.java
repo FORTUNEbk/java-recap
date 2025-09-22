@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 public class Bank {
     class InsufficientFundsException extends Exception {
         public InsufficientFundsException(String message) {
@@ -66,17 +69,25 @@ public class Bank {
             System.out.println("New Balance: " + balance);
         }
     }
-    public static void main(String[] args) {
-        Bank myAccount = new Bank("John Doe", "123456789", 1000.0);
-        
-        System.out.println("Account Holder: " + myAccount.getAccountHilder());
-        System.out.println("Account Number: " + myAccount.getAccountNumber());
-        System.out.println("Initial Balance: " + myAccount.getBalance());
-        
-        myAccount.deposit(500);
-        myAccount.withdraw(200);
-        myAccount.withdraw(2000); 
-        myAccount.deposit(-100);
-        myAccount.withdraw(-50); 
+
+    public void SelectAction(){
+        System.out.println("Select Action: 1. Deposit 2. Withdraw");
+        Scanner scanner = new Scanner(System.in);
+        int action = scanner.nextInt();
+        System.out.println("Enter amount:");
+        double amount = scanner.nextDouble();
+        if (action == 1){
+            deposit(amount);
+        } else if (action == 2){
+            withdraw(amount);
+        } else {
+            System.out.println("Invalid action selected.");
+        }
     }
+    public static void main(String[] args) {
+    Bank bank = new Bank("John Doe", "123456789", 1000.0);
+        bank.SelectAction();
+        
+    
+}
 }
